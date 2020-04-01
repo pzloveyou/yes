@@ -1,0 +1,30 @@
+1.卸载mysql服务
+   sc query mysql:查看mysql服务
+   sc delete mysql：删除mysql服务
+2.安装mysql8.0
+    找到5.7的安装目录下面的my.ini(或者叫my-default.ini)配置文件，mysql服务启动会读取配置文件，
+    将配置文件复制到你的8.0的安装目录下去,更改一下配置文件里面basedir的安装目录路径，是你现在的
+  安装目录路径
+3.环境变量配置
+    电脑》属性》高级系统设置》环境变量》找到系统变量里的path，双击编辑，添加8.0的bin下的全路径。
+4.使用管理员权限安装
+     mysqld -install()
+   出现“Service successfully installed”,则成功。
+   然后启动服务。。。
+      net start mysql
+  （如果服务启动失败：
+   1.data文件夹是自己创建的，删除data文件夹，在DOS界面进入到MySQL的文件夹下  输入这个命令：       mysqld  --initialize ，重新初始化一个data文件。（大部分好像都是这个原因）
+  2.配置my.ini。下面这个好像有说到配置my.ini
+      https://blog.csdn.net/liyangyang0528/article/details/54233632#commentBox
+  3.就是看你的IP有没有被占用
+  4.自己在DOS界面在MySQL文件夹的bin目录中输入mysqld --console命令，查询错误日志，毕竟每个人遇        到的错误原因都不一定相同，可以通过自己的日志找到自己真正错误的原因（推荐方法）
+）;
+
+   然后直接mysql -uroot -p登录就行了
+ （如果是第一次，找到data文件下的err文件，打开找到一个临时密码）
+ （原来的data文件夹里面的数最好后别删，可以复制到8.0这个安装目录data里面）
+
+    这个是修改密码：
+    alter user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '你的密码'
+   
+    最后使用select version();查看一下是8.0就OK了。（我试了如果不修改密码使用这个查看会报错）

@@ -1,0 +1,9 @@
+1.先安装git
+安装完成后
+装git小乌龟
+最后装小乌龟汉化包
+
+2.以管理员身份运行cmd，找到小乌龟安装包的全路径，如：“D:\tools\TortoiseGit-2.10.0.0-64bit.msi”；汉化包也是如此步骤。
+3.全部安装完，桌面右键》tortogit》setting，把language项改成中文，点击确定。
+
+ 安装步骤地址：https://www.cnblogs.com/xueweisuoyong/p/11914045.html

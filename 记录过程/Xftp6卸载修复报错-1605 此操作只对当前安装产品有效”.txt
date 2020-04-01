@@ -1,0 +1,4 @@
+找到C:\Program Files (x找到C:\Program Files (x86)\InstallShield Installation Information目录，下面有几个 “{D7E8A325-92CC-4634-B2B1-42FE98E73B49}”这样的目录，我的方法是一个一个点开，然后执行里面的setup.exe文件，看到其中有一个打开了有xftp的字样，我就把它所在的整个目录删除就可以了。记得把之前安装的Xftp和Xshell目录删了，安装就好了。
+
+xshell和xftp的官方免费下载地址：https://www.netsarang.com/zh/free-for-home-school/
+

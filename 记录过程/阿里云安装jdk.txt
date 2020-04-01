@@ -1,0 +1,68 @@
+1 在/home 文件夹下 新建一个java文件夹
+
+2 把jdk安装包 传输到该文件夹
+
+3 使用 tar -zxvf 安装包 命令 解压
+
+4 配置环境变量 输入 vi /ect/profile 编辑配置文件
+输入
+export JAVA_HOME=/home/java/jdk1.7.0_55
+export JRE_HOME=/home/java/jdk1.7.0_55/jre
+export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+
+5生效环境变量  source /etc/profile
+
+
+6 输入 java -version 检验是否安装成功
+
+
+java -verion 报错  执行该命令 
+因为该jdk安装包是32位 阿里云64位操作系统屏蔽了32位 
+所以安装32位支持
+yum install glibc.i686
+
+
+
+tar  -zxvf 解释
+https://www.cnblogs.com/zhangyongsheng/p/6074829.html
+
+
+
+1 安装tomcat
+/home/jdk/下创建 tomcat文件夹
+
+2 上传安装包到此文件夹
+
+3 使用 tar -zxvf 安装包解压
+
+4 进入安装目录bin 目录 cd bin
+
+5 编辑此文件 vi setclasspath.sh  
+
+6 输入 
+export JAVA_HOME=/home/java/jdk1.7.0_55   
+export JRE_HOME=/home/java/jdk1.7.0_55/jre  
+
+7 执行bin目录下 ./startup.sh
+
+
+
+
+
+
+
+阿里云服务器入门
+https://blog.csdn.net/eussi/article/details/82055275
+
+
+安装jdk
+https://www.jianshu.com/p/3dc92c5bc256 
+
+安装tomcat
+https://blog.csdn.net/linyuxb123/article/details/82725038
+
+
+解决在服务器上 tomcat启动超级慢的方法
+https://www.cnblogs.com/jepson6669/p/9013292.html
+
